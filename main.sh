@@ -2,3 +2,4 @@
 
 ./build.sh
 ./run.sh
+./cleanup.sh
