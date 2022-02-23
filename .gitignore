@@ -1,0 +1,5 @@
+Signal-Desktop/
+release/
+*.txt
+releases.json
+.DS_Store
