@@ -3,6 +3,17 @@ Build Signal Desktop for Fedora 35
 
 This builds a Signal Desktop AppImage file for Fedora within a Podman container.
 
+Why does it exist?
+
+The official [Signal Desktop releases](https://signal.org/download/) are only available for Windows, Mac and Debian-based Linux distributions. 
+
+On Fedora Linux, one simple option to run Signal would be the [Signal Desktop Snap](https://snapcraft.io/signal-desktop). It is created by third parties and packages the Debian-build of Signal Desktop into a Snap. I had several issues with this: 
+
+- I do not want to use Snaps as of yet
+- I do have trust issues, even when I can read the [source code of the Snap](https://github.com/snapcrafters/signal-desktop)
+
+So I took it upon me to compile Signal to AppImage inside a Podman container.
+
 Prerequisities
 --------------
 
