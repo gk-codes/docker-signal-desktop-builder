@@ -15,7 +15,7 @@ nodejsversion=$(cat nodejsversion.txt)
 echo "Latest Node.js version: ${nodejsversion}"
 
 echo "Building container..."
-podman build --format docker \
+podman build --rm --force-rm --format docker \
     --build-arg NODE_VERSION=${nodejsversion} \
     --build-arg SIGNAL_VERSION=${signalversion} \
     -t build-signal-desktop .
