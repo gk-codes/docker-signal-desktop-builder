@@ -59,6 +59,6 @@ How It Works
 Usage
 -----
 
-Run `main.sh` and grab a coffee, it will take a while. When the script is done, there should be `~/Tools/Signal.AppImage`.
+Run `main.sh` and grab a coffee ☕, it will take a while. When the script is done, there should be `~/Tools/Signal.AppImage`.
 
 When everything is done and you created the desktop entry as described above, you should now be able to look for Signal after pressing the Super key.
