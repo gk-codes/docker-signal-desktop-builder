@@ -22,7 +22,7 @@ This project was tested on Fedora 35 (Gnome) with Podman.
 For convenience, create a desktop entry for Signal on your host system:
 
 ```bash
-nano ~/.local/share/applications
+nano ~/.local/share/applications/signal.desktop
 ```
 
 Add desktop entry, replace the path to `Signal.AppImage` with your system's values:
