@@ -5,12 +5,12 @@ ARG NODE_VERSION
 
 SHELL ["/bin/bash", "-c"]
 
-RUN echo "Signal version: ${SIGNAL_VERSION}"
-RUN echo "Node version: ${NODE_VERSION}"
+RUN echo "Signal version: ${SIGNAL_VERSION}\n" \
+    && echo "Node version: ${NODE_VERSION}"
 
 # RUN microdnf groupinstall -y 'Development Tools'
-RUN microdnf install -y g++ git-lfs jq
-RUN microdnf clean all
+RUN microdnf install -y g++ git-lfs jq git tar python \
+    && microdnf clean all
 
 ENV NVM_DIR=/root/.nvm
 
@@ -32,8 +32,7 @@ ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 
 RUN npm install --global yarn
 
-RUN node --version
-RUN npm --version
+RUN node --version && npm --version && yarn --version
 
 # find the build target line number in package.json and change it from "deb" to "AppImage"
 RUN linenumber=$(jq . package.json | grep -n -m 1 -w '"deb"' | cut -d':' -f1) \
