@@ -19,6 +19,8 @@ Prerequisities
 
 This project was tested on Fedora 35 (Gnome) with Podman.
 
+It is designed to run on the client system on which Signal Desktop should be installed.
+
 On your host system, you need to install the following packages:
 
 ```bash
