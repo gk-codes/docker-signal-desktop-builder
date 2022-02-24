@@ -19,6 +19,12 @@ Prerequisities
 
 This project was tested on Fedora 35 (Gnome) with Podman.
 
+On your host system, you need to install the following packages:
+
+```bash
+sudo dnf install git podman
+```
+
 For convenience, create a desktop entry for Signal on your host system:
 
 ```bash
