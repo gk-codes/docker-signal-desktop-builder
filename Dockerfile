@@ -1,4 +1,4 @@
-FROM fedora:35
+FROM registry.fedoraproject.org/fedora-minimal:35
 
 ARG SIGNAL_VERSION
 ARG NODE_VERSION
@@ -8,9 +8,9 @@ SHELL ["/bin/bash", "-c"]
 RUN echo "Signal version: ${SIGNAL_VERSION}"
 RUN echo "Node version: ${NODE_VERSION}"
 
-RUN dnf groupinstall -y 'Development Tools'
-RUN dnf install -y g++ git-lfs jq
-RUN dnf clean all
+# RUN microdnf groupinstall -y 'Development Tools'
+RUN microdnf install -y g++ git-lfs jq
+RUN microdnf clean all
 
 ENV NVM_DIR=/root/.nvm
 
