@@ -31,6 +31,11 @@ echo "Starting container ${CONTAINER_NAME}"
 CONTAINER_ID=$(podman run --name ${CONTAINER_NAME} -p 8080:8080 -d localhost/build-signal-desktop:latest)
 
 echo "Downloading Signal v${SIGNAL_VER}"
+
+if [ -f "${SIGNAL_BIN}" ]; then
+    rm -f "${SIGNAL_BIN}"
+fi
+
 wget -c "${SIGNAL_URL}" -O "${SIGNAL_BIN}"
 chmod +x ${SIGNAL_BIN}
 
